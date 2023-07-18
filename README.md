@@ -35,3 +35,11 @@ This images contains many Android and nodejs tools, you can try others commands 
     export GRADLE_USER_HOME=/app/android/.gradle
     ./gradlew tasks
     ./gradlew assembleDebug
+
+## Docs
+
+[https://capacitorjs.com/docs/android](https://capacitorjs.com/docs/android)
+
+## Github Action
+
+Refer this github action if you want to build everything on github: [https://github.com/nguoianphu/pkmn.help/blob/vitejs/.github/workflows/build.yml](https://github.com/nguoianphu/pkmn.help/blob/vitejs/.github/workflows/build.yml)
