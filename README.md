@@ -28,6 +28,8 @@ The debug apk file will be available at __app/android/app/build/outputs/apk/debu
 
 This images contains many Android and nodejs tools, you can try others commands as well
 
+[https://hub.docker.com/r/nguoianphu/capacitor](https://hub.docker.com/r/nguoianphu/capacitor)
+
     docker run --rm -it -v ./app:/app nguoianphu/capacitor bash
     
     # Build android
