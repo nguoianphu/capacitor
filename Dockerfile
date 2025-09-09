@@ -1,12 +1,18 @@
 # syntax=docker/dockerfile:1
 
+FROM node:lts-alpine AS node
+
 FROM nguoianphu/alpine-android:android-28-jdk17
+
+COPY --from=node /usr/lib /usr/lib
+COPY --from=node /usr/local/lib /usr/local/lib
+COPY --from=node /usr/local/include /usr/local/include
+COPY --from=node /usr/local/bin /usr/local/bin
 
 LABEL maintainer="Vo Hung Tuan <nguoianphu@gmail.com>"
 
-# Install nodejs and capacitor
-WORKDIR /nodejs
-RUN apk add nodejs npm \
+# Install capacitor
+RUN node -v \
  && npm install -g npm npx @ionic/cli \
  && npm install @capacitor/core @capacitor/cli @capacitor/android
 
