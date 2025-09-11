@@ -49,7 +49,9 @@ jobs:
           builder: ${{ steps.buildx.outputs.name }}
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ${{ vars.DOCKERHUB_USERNAME }}/capacitor:latest
+          tags: |
+            ${{ env.DH_IMAGE_NAME }}:latest
+            ghcr.io/${{ env.GHCR_IMAGE_NAME }}:latest
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache
       - name: Image digest
