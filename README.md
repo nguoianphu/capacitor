@@ -18,7 +18,9 @@ Put your __package.json__ into __app__ also
 
 At same folder level with __app__ directory (outside __app__), run
 
-    docker run --rm -it -v ./app:/app nguoianphu/capacitor
+    docker run --rm -it -v ./app:/app ghcr.io/nguoianphu/capacitor
+
+    # docker run --rm -it -v ./app:/app nguoianphu/capacitor
 
 It will initialize capacitor into __app__ folder and generate folder __android__. Then it will build the android with __assembleDebug__ command.
 
@@ -30,7 +32,13 @@ This images contains many Android and nodejs tools, you can try others commands 
 
 [https://hub.docker.com/r/nguoianphu/capacitor](https://hub.docker.com/r/nguoianphu/capacitor)
 
-    docker run --rm -it -v ./app:/app nguoianphu/capacitor bash
+or
+
+[https://github.com/users/nguoianphu/packages/container/package/capacitor](https://github.com/users/nguoianphu/packages/container/package/capacitor)
+
+    docker run --rm -it -v ./app:/app ghcr.io/nguoianphu/capacitor bash
+
+    # docker run --rm -it -v ./app:/app nguoianphu/capacitor bash
     
     # Build android
     cd android
