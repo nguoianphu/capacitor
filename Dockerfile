@@ -2,7 +2,8 @@
 
 FROM node:lts-alpine AS node
 
-FROM nguoianphu/alpine-android:android-28-jdk17
+FROM ghcr.io/nguoianphu/alpine-android:android-28-jdk17
+# FROM nguoianphu/alpine-android:android-28-jdk17
 
 COPY --from=node /usr/lib /usr/lib
 COPY --from=node /usr/local/lib /usr/local/lib
