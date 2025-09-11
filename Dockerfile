@@ -1,6 +1,7 @@
 # syntax=docker/dockerfile:1
 
-FROM node:lts-alpine AS node
+FROM public.ecr.aws/docker/library/node:lts-alpine AS node
+# FROM node:lts-alpine AS node
 
 FROM ghcr.io/nguoianphu/alpine-android:android-28-jdk17
 # FROM nguoianphu/alpine-android:android-28-jdk17
