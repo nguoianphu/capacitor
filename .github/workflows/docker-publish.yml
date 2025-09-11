@@ -25,8 +25,8 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: |
-            ${{ env.DH_IMAGE_BASE_NAME }}
-            ghcr.io/${{ env.GHCR_IMAGE_BASE_NAME }}
+            ${{ env.DH_IMAGE_NAME }}
+            ghcr.io/${{ env.GHCR_IMAGE_NAME }}
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
       - name: Login to DockerHub
