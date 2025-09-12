@@ -15,6 +15,7 @@ if [[ "$1" == "build" ]]; then
         cp /nodejs/package.json .
     fi
     cp -fr /nodejs/node_modules .
+    rm -rf capacitor.config.ts android
     npm install
     echo n | npx cap init MyApp com.myapp --web-dir dist
     echo n | npx cap add android
