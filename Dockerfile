@@ -14,6 +14,7 @@ COPY --from=node /usr/local/bin /usr/local/bin
 LABEL maintainer="Vo Hung Tuan <nguoianphu@gmail.com>"
 
 # Install capacitor
+WORKDIR /nodejs
 RUN node -v \
  && npm install -g npm npx @ionic/cli \
  && npm install @capacitor/core @capacitor/cli @capacitor/android
